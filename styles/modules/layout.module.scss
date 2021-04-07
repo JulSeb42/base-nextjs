@@ -1,0 +1,12 @@
+@import "../mixins";
+/*=============================================== Layout ===============================================*/
+
+.layout {
+    width: 100%;
+    @include grid(1fr 60ch 1fr, var(--margin-l), 0);
+    padding: var(--margin-xxl) 0;
+
+    & > * {
+        grid-column: 2;
+    }
+}

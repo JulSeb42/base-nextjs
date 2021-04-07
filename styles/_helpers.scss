@@ -1,0 +1,79 @@
+/*============================================================= Helpers =============================================================*/
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.clear-float {
+    float: none;
+}
+
+.hidden {
+    position: fixed;
+    top: -999em;
+    left: -999em;
+}
+
+.no-marg {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-marg-top {
+    margin-top: 0;
+}
+
+.no-marg-bottom {
+    margin-bottom: 0;
+}
+
+.no-marg-left {
+    margin-left: 0;
+}
+
+.no-marg-right {
+    margin-right: 0;
+}
+
+.no-padd {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.no-padd-top {
+    padding-top: 0;
+}
+
+.no-padd-bottom {
+    padding-bottom: 0;
+}
+
+.no-padd-left {
+    padding-left: 0;
+}
+
+.no-padd-right {
+    padding-right: 0;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.center {
+    @include flexbox(center, center, nowrap)
+}

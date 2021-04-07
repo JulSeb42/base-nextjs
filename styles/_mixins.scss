@@ -1,0 +1,40 @@
+/*============================================================= Mixins =============================================================*/
+
+@mixin flexbox($align, $justify, $wrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+
+@mixin grid($size, $column-gap, $row-gap) {
+    display: grid;
+    grid-template-columns: $size;
+    column-gap: $column-gap;
+    row-gap: $row-gap;
+}
+
+@mixin icon($unicode) {
+    font-family: "fajny-css-icons";
+    content: $unicode;
+}
+
+@mixin font-size($font-size) {
+    font-size: $font-size;
+    line-height: $font-size * var(--line-height);
+}
+
+@mixin paMar() {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin ulNone() {
+    list-style: none;
+    @include paMar();
+}
+
+@mixin bgCenter() {
+    background-position: center !important;
+    background-size: cover !important;
+}
