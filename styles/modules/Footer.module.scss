@@ -1,0 +1,8 @@
+@import "../mixins";
+/*=============================================== Footer ===============================================*/
+
+.Footer {
+    width: 100vw;
+    @include flexbox(center, space-between, nowrap);
+    padding: var(--margin-l) 5vw;
+}
