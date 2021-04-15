@@ -1,23 +1,24 @@
 // Imports
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import Link from "next/link"
+import Header from "../components/Header";
+import Container from "../components/Container";
+import Footer from "../components/Footer";
+import Link from "next/link";
 
 // Blog
 import { getSortedPosts } from "../lib/posts";
 
 // Data
-import SiteData from "../components/SiteData"
+import SiteData from "../components/SiteData";
 
 // Styles
 import styles from "../styles/modules/Home.module.scss";
 
-export default function Home({allPostsData}) {
+export default function Home({ allPostsData }) {
     return (
         <div className={styles.Wrapper}>
             <Header title="Home" description="" keywords="" />
 
-            <main className={styles.Container}>
+            <Container>
                 <h1>{SiteData.siteName}</h1>
 
                 <h2>Posts</h2>
@@ -33,7 +34,7 @@ export default function Home({allPostsData}) {
                         </Link>
                     </section>
                 ))}
-            </main>
+            </Container>
 
             <Footer />
         </div>

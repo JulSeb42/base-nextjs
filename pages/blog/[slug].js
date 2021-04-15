@@ -1,6 +1,7 @@
 // Components
 import Header from "../../components/Header";
-import Footer from "../../components/Footer"
+import Container from "../components/Container";
+import Footer from "../../components/Footer";
 
 // MDX components
 import { getAllPostSlugs, getPostdata } from "../../lib/posts";
@@ -9,7 +10,7 @@ import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 
 // Styles
-import styles from "../../styles/modules/Blog.module.scss"
+import styles from "../../styles/modules/Blog.module.scss";
 
 // Import all components used in MDX files here
 const components = {};
@@ -24,10 +25,10 @@ export default function Posts({ source, frontMatter }) {
                 keywords={frontMatter.keywords}
             />
 
-            <main className={styles.Container}>
+            <Container>
                 <h1>{frontMatter.title}</h1>
                 {content}
-            </main>
+            </Container>
 
             <Footer />
         </div>
