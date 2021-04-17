@@ -1,7 +1,6 @@
 // Imports
-import Header from "../components/Header";
-import Container from "../components/Container";
-import Footer from "../components/Footer";
+import Wrapper from "../components/Containers/Wrapper";
+import Container from "../components/Containers/Container";
 import Link from "next/link";
 
 // Blog
@@ -13,11 +12,17 @@ import SiteData from "../components/SiteData";
 // Styles
 import styles from "../styles/modules/Home.module.scss";
 
+const pageTitle = "Homepage";
+const description = "Meta description";
+const keywords = ["keyword", "keyword"];
+
 export default function Home({ allPostsData }) {
     return (
-        <div className={styles.Wrapper}>
-            <Header title="Home" description="" keywords="" />
-
+        <Wrapper
+            title={pageTitle}
+            description={description}
+            keywords={keywords}
+        >
             <Container>
                 <h1>{SiteData.siteName}</h1>
 
@@ -35,9 +40,7 @@ export default function Home({ allPostsData }) {
                     </section>
                 ))}
             </Container>
-
-            <Footer />
-        </div>
+        </Wrapper>
     );
 }
 

@@ -1,8 +1,8 @@
 // Data
-import SiteData from "./SiteData"
+import SiteData from "../SiteData";
 
 // Styles
-import styles from "../styles/modules/Footer.module.scss"
+import styles from "../../styles/modules/Footer.module.scss";
 
 export default function Footer() {
     return (

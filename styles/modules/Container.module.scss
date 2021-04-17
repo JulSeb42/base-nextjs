@@ -5,11 +5,11 @@
 .Container {
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 600px 1fr;
-    padding: var(--margin-xxl) 0;
+    grid-template-columns: var(--grid-template);
+    padding: var(--grid-padding);
     row-gap: var(--margin-m);
 
     & > * {
-        grid-column: 2;
+        grid-column: var(--grid-column);
     }
 }

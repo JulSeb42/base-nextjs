@@ -21,4 +21,15 @@
     // Font weights
     --font-weight: 400;
     --font-weight-bold: 700;
+
+    // Container
+    --grid-template: 1fr 600px 1fr;
+    --grid-column: 2;
+    --grid-padding: var(--margin-xxl) 0;
+
+    @include mobile() {
+        --grid-template: 1fr;
+        --grid-column: 1;
+        --grid-padding: var(--margin-xxl) 5vw;
+    }
 }

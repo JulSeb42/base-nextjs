@@ -1,7 +1,6 @@
 // Components
-import Header from "../../components/Header";
-import Container from "../components/Container";
-import Footer from "../../components/Footer";
+import Wrapper from "../../components/Containers/Wrapper";
+import Container from "../../components/Containers/Container";
 
 // MDX components
 import { getAllPostSlugs, getPostdata } from "../../lib/posts";
@@ -18,20 +17,16 @@ const components = {};
 export default function Posts({ source, frontMatter }) {
     const content = hydrate(source, { components });
     return (
-        <div className={styles.Wrapper}>
-            <Header
-                title={frontMatter.title}
-                description={frontMatter.description}
-                keywords={frontMatter.keywords}
-            />
-
+        <Wrapper
+            title={frontMatter.title}
+            description={frontMatter.description}
+            keywords={frontMatter.keywords}
+        >
             <Container>
                 <h1>{frontMatter.title}</h1>
                 {content}
             </Container>
-
-            <Footer />
-        </div>
+        </Wrapper>
     );
 }
 
