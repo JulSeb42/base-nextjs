@@ -1,4 +1,4 @@
-// Imports
+// Components
 import Wrapper from "../components/Containers/Wrapper";
 import Container from "../components/Containers/Container";
 import Link from "next/link";
@@ -12,6 +12,7 @@ import SiteData from "../components/SiteData";
 // Styles
 import styles from "../styles/modules/Home.module.scss";
 
+// Text variables
 const pageTitle = "Homepage";
 const description = "Meta description";
 const keywords = ["keyword", "keyword"];
