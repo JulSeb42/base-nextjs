@@ -3,6 +3,7 @@ import { useState } from "react";
 
 // Components
 import Link from "next/link";
+import Logo from "../UI/Logo"
 
 // Data
 import siteData from "../SiteData";
@@ -39,9 +40,7 @@ export default function Header() {
 
     return (
         <header className={styles.Header}>
-            <Link href="/">
-                <a className={styles.Logo}>{siteData.siteName}</a>
-            </Link>
+            <Logo />
 
             <Burger />
 

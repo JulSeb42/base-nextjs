@@ -1,33 +1,19 @@
-//Packages
-import styled from "styled-components";
+//Components
 import Image from "next/image";
 
 //Styles
-const Container = styled.div`
-    width: 100%;
-
-    > div {
-        position: unset !important;
-    }
-
-    .img {
-        object-fit: contain;
-        width: 100% !important;
-        position: relative !important;
-        height: unset !important;
-    }
-`;
+import styles from "../../styles/modules/ImageFix.module.scss"
 
 export default function ImageFix(props) {
     return (
-        <Container>
+        <div className={styles.Container}>
             <Image
                 src={props.src}
                 layout="fill"
-                className="img"
+                className={styles.Img}
                 alt={props.alt}
                 sizes="100%"
             />
-        </Container>
+        </div>
     );
 }
